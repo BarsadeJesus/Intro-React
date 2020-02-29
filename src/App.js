@@ -1,34 +1,27 @@
-import React, { useState } from 'react';
-import MyComponent from './MyComponet'
-import logo from './logo.svg';
+import React, { useState } from 'react'
+import {render} from 'react-dom'
 import './App.css';
+import logo from './logo.svg';
 
-function App() {
-  const [ count, setCount ] = useState(0)
+const App = () => {
+    //const [name, setName] = useState('Patty');
+    const [count, setCount]= useState(0);
 
-  const addMount = () => {
-    setCount(count+1)
-  } 
-
-  const removeMount = () => {
-    setCount(count-1)
-  } 
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <MyComponent name="Johan"/>
-        <button onClick={addMount}>
-          +
-        </button>
-        <button onClick={removeMount}>
-          -
-        </button>
-        <h1>{count}</h1>
-      </header>
+    const sumar = () => {
+        setCount(count+1)
+    }
+    const restar = () => {
+        setCount(count-1)
+    }
+    return (
+    <div className='App' >
+    <head className='App-header' >
+        <img src={logo}></img>
+        <div>{count}</div>
+        <button onClick={sumar} >Sumar</button>
+        <button onClick={restar} >Restar</button>
+    </head>
     </div>
-  );
+    )
 }
-
-export default App;
+export default App
