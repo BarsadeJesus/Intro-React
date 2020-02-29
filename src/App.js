@@ -1,25 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {render} from 'react-dom'
 import './App.css';
 import logo from './logo.svg';
+import ComponenteContador from './components/contador'
 
 const App = () => {
     //const [name, setName] = useState('Patty');
-    const [count, setCount]= useState(0);
-
-    const sumar = () => {
-        setCount(count+1)
-    }
-    const restar = () => {
-        setCount(count-1)
-    }
+    const name= 'patty';
+    const lastName ='barrientos';
     return (
     <div className='App' >
     <head className='App-header' >
         <img src={logo}></img>
-        <div>{count}</div>
-        <button onClick={sumar} >Sumar</button>
-        <button onClick={restar} >Restar</button>
+       <ComponenteContador nameApp={name} lastNameApp={lastName} /> 
     </head>
     </div>
     )
