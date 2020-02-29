@@ -3,6 +3,8 @@ import {render} from 'react-dom'
 import './App.css';
 import logo from './logo.svg';
 import ComponenteContador from './components/contador'
+import TodoListApp from './components/TodoListApp'
+import Pokemon from './components/pokemon'
 
 const App = () => {
     //const [name, setName] = useState('Patty');
@@ -12,7 +14,9 @@ const App = () => {
     <div className='App' >
     <head className='App-header' >
         <img src={logo}></img>
-       <ComponenteContador nameApp={name} lastNameApp={lastName} /> 
+       { /*<ComponenteContador nameApp={name} lastNameApp={lastName} /> */}
+       {/* <TodoListApp />  */}
+        <Pokemon></Pokemon>
     </head>
     </div>
     )
